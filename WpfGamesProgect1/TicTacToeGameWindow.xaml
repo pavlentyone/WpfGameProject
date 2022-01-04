@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfGamesProgect1.TicTacToeGameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TicTacToeGameWindow" Height="300" Width="300"
+        Loaded="Window_Loaded"
+        MouseUp="Window_MouseUp"
+        KeyUp="Window_KeyUp">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Name="TicTacToeGrid" Grid.Column="0" Grid.Row="0">
+            <Grid.ColumnDefinitions></Grid.ColumnDefinitions>
+            <Grid.RowDefinitions></Grid.RowDefinitions>
+        </Grid>
+        <Label Name="InfoTextBlock" Grid.Column="0" Grid.Row="1" MinHeight="30" Visibility="Collapsed" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+        <Button Name="RestartButton" Content="Еще разок!" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" MinWidth="30" Visibility="Collapsed" Click="RestartButton_Click"></Button>
+    </Grid>
+</Window>
